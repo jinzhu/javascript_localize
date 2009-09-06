@@ -1,0 +1,26 @@
+= Javascript Localize
+
+== INSTALL:
+  $ ./script/plugin install git://github.com/jinzhu/locale_javascript.git
+
+== How To Use:
+  1. drop all localized content into RAILS_ROOT/js_locales/
+    e.g:
+      RAILS_ROOT/js_locales/en.yml
+        hello world : 'Hello World!'
+      RAILS_ROOT/js_locales/zh.yml
+        hello world : '世界你好!'
+
+   2. include into views
+     <%= include_localized_javascript %>
+
+   3. Use it as javascript
+     _('hello world')
+
+   4. Rake Task
+     rake sync_js_locale  => Keep localized content in sync with default locale
+     rake build_js_locale => Generate javascript localization files
+
+Author : ZhangJinzhu
+GitHub : http://github.com/jinzhu
+Email  : wosmvp (no-spam) gmail (no-spam) com
