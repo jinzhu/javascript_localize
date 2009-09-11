@@ -24,7 +24,7 @@ task :sync_js_locale => :environment do
 
   (I18n.available_locales - [I18n.default_locale]).map do |x|
     f = File.new(result[x],'w')
-    f << { x => copy_hash(result["#{I18n.default_locale.to_s}_content"],result["#{x.to_s}_content"])}.ya2yaml
+    f << copy_hash(result["#{I18n.default_locale.to_s}_content"],result["#{x.to_s}_content"]).ya2yaml
     f.close
   end
 end
