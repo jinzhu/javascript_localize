@@ -8,6 +8,8 @@
     e.g:
       RAILS_ROOT/js_locales/en.yml
         hello world : 'Hello World!'
+        hello world for you : '{{you}},Hello World!'
+
       RAILS_ROOT/js_locales/zh.yml
         hello world : '世界你好!'
 
@@ -16,6 +18,7 @@
 
    3. Use it as javascript
      _('hello world')
+     _('hello world for you',{you : 'ZhangJinzhu'})
 
    4. Rake Task
      rake sync_js_locale  => Keep localized content in sync with default locale
