@@ -12,17 +12,18 @@
 
       RAILS_ROOT/js_locales/zh.yml
         hello world : '世界你好!'
+        hello world for you : '{{you}},世界你好!'
 
    2. include into views
      <%= include_localized_javascript %>
 
    3. Use it as javascript
-     _('hello world')
-     _('hello world for you',{you : 'ZhangJinzhu'})
+     _('hello world')                                 => en: 'Hello World!'               zh: '世界你好!'
+     _('hello world for you',{you : 'ZhangJinzhu'})   => en: 'ZhangJinzhu,Hello World!'   zh: 'ZhangJinzhu,世界你好!'
 
    4. Rake Task
-     rake sync_js_locale  => Keep localized content in sync with default locale
-     rake build_js_locale => Generate javascript localization files
+     rake js_locale:sync  => Keep localized content in sync with default locale
+     rake js_locale:build => Generate javascript localization files
 
 Author : ZhangJinzhu
 GitHub : http://github.com/jinzhu
