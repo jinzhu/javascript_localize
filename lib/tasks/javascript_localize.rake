@@ -16,7 +16,7 @@ namespace :javascript_localize do
     result = {}
 
     I18n.available_locales.map do |x|
-      file = File.join(RAILS_ROOT,'js_locales',"#{x.to_s}.yml")
+      file = File.join(RAILS_ROOT,"config","js_locales","#{x.to_s}.yml")
       result.update({x => file})
       result.update({"#{x.to_s}_content" => 
                     File.exist?(file) ? (YAML.load_file(file) || {}) : {}
