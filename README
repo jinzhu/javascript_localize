@@ -4,13 +4,13 @@
   $ ./script/plugin install git://github.com/jinzhu/locale_javascript.git
 
 == How To Use:
-  1. drop all localized content into RAILS_ROOT/js_locales/
+  1. drop all localized content into RAILS_ROOT/config/js_locales/
     e.g:
-      RAILS_ROOT/js_locales/en.yml
+      RAILS_ROOT/config/js_locales/en.yml
         hello world : 'Hello World!'
         hello world for you : '{{you}},Hello World!'
 
-      RAILS_ROOT/js_locales/zh.yml
+      RAILS_ROOT/config/js_locales/zh.yml
         hello world : '世界你好!'
         hello world for you : '{{you}},世界你好!'
 
